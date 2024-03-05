@@ -1,0 +1,90 @@
+h1, p, button{
+    padding-left: 20px;
+}
+
+h1, h2{
+    padding-top: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #057;
+    font-size: 20px;
+    border-radius: 0;
+    color: #057;
+}
+
+h2{
+    font-size: 16px;
+    border: none;
+}
+
+button{
+    border: none;
+}
+
+p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+:root {
+    --white: #ffff;
+    --black: linear-gradient(to bottom right, #001, #000, #000); 
+}
+
+body::-webkit-scrollbar {
+  width: 0; /* Oculta la barra de desplazamiento en navegadores webkit */
+}
+
+* {
+    background: #0000;
+    font-family: "Montserrat","Comic Sans MS", "Roboto", inconsolata, Consolas, sans-serif;
+    font-size: 16px;
+    color: #000;
+    transition-duration: 200ms;
+    cursor: default;
+    padding: 0;
+    border-radius: 5px;
+}
+
+::selection {
+  background-color: #fe0; /* Color de fondo durante la selección */
+  color: #000; /* Color del texto durante la selección */
+}
+
+::-moz-selection {
+  background-color: #fe0; /* Para navegadores basados en Gecko (por ejemplo, Firefox) */
+  color: #000; /* Para navegadores basados en Gecko (por ejemplo, Firefox) */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    position: relative; 
+    /*background-color: #0bf;*/
+}
+
+#body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0); /* Centra el contenido */
+    z-index: 2; /* Coloca el contenido sobre el fondo */
+    width: 40%; 
+    background-color: #fff;
+    padding: 40px;
+    padding-top: 20px;
+    border-radius: 0;
+    overflow: visible;
+}
+
+@media only screen and (max-width: 800px) {
+    #body {
+        width: 95%; 
+    }
+}
+
+.cont{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+}
