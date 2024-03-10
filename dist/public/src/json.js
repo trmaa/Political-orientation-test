@@ -42,3 +42,15 @@ export async function json_instance(datos){
         }
     });
 }
+
+export async function html_read(src){
+    try {
+        const res = await fetch(src);
+        if (!res.ok) {
+            throw new Error('Error al cargar el archivo');
+        }
+        return res.text();
+    } catch(err) {
+        console.error(err);
+    }
+}

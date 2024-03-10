@@ -1,9 +1,9 @@
 [
 	{
-		"question": "Foreign people",
+		"question": "Immigration",
 		"f": "They deserve slavery or the worse jobs",
 		"s": "Everyone should stay at their country",
-		"c": "They got the same rights as me, however they will stay unable to vote until they show the oposit",
+		"c": "They got the same rights as me, however they will stay unable to vote until they prove their patriotism",
 		"l": "No restrictions, unless it's a criminal"
 	},
 	{
@@ -12,5 +12,19 @@
 		"s": "Must take care of economy, production and people",
 		"c": "Must not exsist",
 		"l": "Must just make sure private property is safe and there is free market"
+	},
+	{
+		"question": "Plato's society",
+		"f": "No, power and property are necessary to get order",
+		"s": "No, power and property are necessary in order to distrivute resources ecualitatively",
+		"c": "Yes, it is just what the world needs, inspite of all the antiartistic part",
+		"l": "No, power and property are necessary in order to give people a reason to hard work"
+	},
+	{
+		"question": "Crime",
+		"f": "Must be hardly punished but it's able to be compensate with money",
+		"s": "Crime has no gap in my society unless it's done by the government, because the end justifies the means",
+		"c": "The people handeles it, no one wants crime so it desapeares naturaly",
+		"l": "Must be hardly punished but the only crimes eare: steal, rob and kill. So the government is not able to commit dose crimes allso, which means no taxes"
 	}
 ]

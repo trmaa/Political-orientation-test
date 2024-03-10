@@ -1,14 +1,15 @@
-import { json_read } from "./json.js";
+import { json_read, html_read } from "./json.js";
 import { pixabay_getImg } from "./pixabay.js";
 import { asignSounds } from "./style.js";
+import { feedback_completion } from "./loadingBar.js";
 
-let Fascista = 0;
-let Sovietico = 0;
-let Comunista = 0;
+let Fascist = 0;
+let Sovietic = 0;
+let Comunist = 0;
 let Liberal = 0;
 
 function calc(){
-    let datos = {Fascista:Fascista,Sovietico:Sovietico,Comunista:Comunista,Liberal:Liberal};
+    let datos = {Fascist:Fascist,Sovietic:Sovietic,Comunist:Comunist,Liberal:Liberal};
     let valores = Object.values(datos);
     let maximo = Math.max.apply(null, valores);
     let idMaximo = Object.keys(datos).find(key => datos[key] === maximo);
@@ -48,13 +49,13 @@ async function load()
                 const optionClass = option.classList[0];
                 switch (optionClass) {
                     case 'f':
-                        Fascista++;
+                        Fascist++;
                         break;
                     case 's':
-                        Sovietico++;
+                        Sovietic++;
                         break;
                     case 'c':
-                        Comunista++;
+                        Comunist++;
                         break;
                     case 'l':
                         Liberal++;
@@ -63,6 +64,7 @@ async function load()
                         break;
                 }
                 questionElement.remove();
+                feedback_completion();
             });
         });
     }
@@ -73,7 +75,11 @@ async function load()
 
 let intervalId = setInterval(() => {
     if (document.getElementById("questions").innerHTML === "") {
-        window.alert("Eres: "+calc());
-        clearInterval(intervalId);
+        (async () => {
+            let result = window.open();
+            let content = await html_read("./components/result.html");
+            result.document.write(content);
+            clearInterval(intervalId);
+        })();
     }
 }, 100);

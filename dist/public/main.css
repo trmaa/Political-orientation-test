@@ -1,5 +1,6 @@
 h1, p, button{
     padding-left: 20px;
+    border-radius: 0;
 }
 
 h1, h2{
@@ -21,7 +22,7 @@ button{
 }
 
 p:hover {
-    text-decoration: underline;
+    background-color: #ff0;
     cursor: pointer;
 }
 
@@ -39,7 +40,7 @@ body::-webkit-scrollbar {
     font-family: "Montserrat","Comic Sans MS", "Roboto", inconsolata, Consolas, sans-serif;
     font-size: 16px;
     color: #000;
-    transition-duration: 200ms;
+    transition-duration: 0ms;
     cursor: default;
     padding: 0;
     border-radius: 5px;
@@ -87,4 +88,22 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     column-gap: 20px;
+}
+
+ #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff0;
+    height: 25px;
+    display: flex; /* Utilizamos flexbox para mostrar la barra correctamente */
+    z-index: 2;
+    border-radius: 0;
+}
+#barra {
+    height: 100%;
+    background-color: #ed0;
+    width: 0; /* Inicialmente la barra no ocupa espacio */
+    transition-duration: 500ms;
+    border-radius: 0;
 }
