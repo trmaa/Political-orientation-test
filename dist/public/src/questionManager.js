@@ -18,14 +18,12 @@ async function calc(){
 
     return `
         <div id="left">
-            <b>You are: </b> ${" "+idMaximo} <br></br>
-
             <div id="vars">
-                <div class="muestra" style="background:#55f;">..</div>Fascist:<div id="Fascist"> ${datos.Fascist*100/questions.length}</div>%
-                <div class="muestra" style="background:#f55;">..</div>Sovietic:<div id="Sovietic"> ${datos.Sovietic*100/questions.length}</div>%
-                <div class="muestra" style="background:#ff5;">..</div>Comunist:<div id="Comunist"> ${datos.Comunist*100/questions.length}</div>%
-                <div class="muestra" style="background:#5ff;">..</div>Liberal:<div id="Liberal"> ${datos.Liberal*100/questions.length}</div>%
-                <div class="muestra" style="background:#5f5;">..</div>Silly without thaughts:<div> ${100-(datos.Liberal+datos.Fascist+datos.Sovietic+datos.Comunist)*100/questions.length}</div>%
+                <div class="muestra" style="background:#55f;">..</div>Fascist:<div id="Fascist"> ${parseInt(datos.Fascist*100/questions.length)}</div>%
+                <div class="muestra" style="background:#f55;">..</div>Sovietic:<div id="Sovietic"> ${parseInt(datos.Sovietic*100/questions.length)}</div>%
+                <div class="muestra" style="background:#ff5;">..</div>Comunist:<div id="Comunist"> ${parseInt(datos.Comunist*100/questions.length)}</div>%
+                <div class="muestra" style="background:#5ff;">..</div>Liberal:<div id="Liberal"> ${parseInt(datos.Liberal*100/questions.length)}</div>%
+                <div class="muestra" style="background:#5f5;">..</div>Silly without thaughts:<div> ${parseInt(100-(datos.Liberal+datos.Fascist+datos.Sovietic+datos.Comunist)*100/questions.length)}</div>%
             </div>
         </div>
         <div id="right">
@@ -50,7 +48,7 @@ async function load()
                     <p class="s">b) ${q.s}</p>
                     <p class="c">c) ${q.c}</p>
                     <p class="l">d) ${q.l}</p>
-                    <p>e) none</p>
+                    <p>e) none of them</p>
                 </div>
                 <div class="foto">
                     <img src="${img}" style="width:100%;"></img>

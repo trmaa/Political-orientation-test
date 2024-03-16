@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The political compass</title>
+    <title>BEST POLITICAL TEST</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
     <link rel="stylesheet" type="text/css" href="back.css">
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -16,6 +16,14 @@
         height: 60vh;
         display: grid;
         grid-template-columns: 2fr 6fr;
+        column-gap: 20px;
+    }
+
+    #info{
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
     }
 
     </style>
@@ -25,7 +33,20 @@
     <h1>THE BEST POLITICAL IDEOLOGY TEST</h1>
     <div id="questions"></div>
 
-    <div id="calc">loading...</div>
+    <div id="calc">It didn't load, sorry...</div>
+
+    <div id="info">
+        <div id="examples">
+            <div class="muestra" style="background:#55f;">..</div>: Hitler, Mussolini, Franco, Milei, Donald Trump...
+            <div class="muestra" style="background:#f55;">..</div>: Lenin, Stalin...
+            <div class="muestra" style="background:#ff5;">..</div>: Marx, Che, Durruti...
+            <div class="muestra" style="background:#5ff;">..</div>: Elon Musk...
+        </div>
+        <div id="explanation">
+            <b>Graphic explanation:</b>
+            X axis means in favor of private property over production systems, and Y axis means public property over production systems.
+        </div>
+    </div>
 </div>
 <div class="area" style="border-radius: 0;" >
     <ul class="circles">
@@ -117,14 +138,14 @@ function graph(){
     const Comunist =  parseInt(document.querySelector("#Comunist").innerHTML);
     const Liberal = parseInt(document.querySelector("#Liberal").innerHTML);
 
-    let y = (Fascist+Sovietic-Liberal-Comunist)*2.5;
-    let x = (Fascist+Liberal-Comunist-Sovietic)*1.3;
+    let y = (Fascist+Sovietic-Liberal-Comunist)/3//*2.5;
+    let x = (Fascist+Liberal-Comunist-Sovietic)/3//*1.3;
     
     console.log(x +" - "+ y)
 
     let pointer = document.querySelector("#pointer");
-    pointer.style.left = `calc(${x}px - 50%)`;
-    pointer.style.bottom = `${y}px`;
+    pointer.style.left = `calc(${x}% - 50%)`;
+    pointer.style.bottom = `${y}%`;
 }
 
 let inter = setInterval(() => {

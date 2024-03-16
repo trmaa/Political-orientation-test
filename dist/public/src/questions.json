@@ -1,30 +1,51 @@
 [
 	{
 		"question": "Immigration",
-		"f": "They deserve slavery or the worse jobs",
-		"s": "Everyone should stay at their country",
-		"c": "They got the same rights as me, however they will stay unable to vote until they prove their patriotism",
-		"l": "No restrictions, unless it's a criminal"
+		"f": "They deserve slavery or the worst jobs.",
+		"s": "Everyone should stay in their country.",
+		"c": "They got the same rights as me, however they will stay unable to vote until they prove their patriotism.",
+		"l": "No restrictions, unless it's a criminal."
 	},
 	{
 		"question": "Government and laws",
-		"f": "Must defende the order and the values of civilization",
-		"s": "Must take care of economy, production and people",
-		"c": "Must not exsist",
-		"l": "Must just make sure private property is safe and there is free market"
+		"f": "Must defend the order and the values of civilization.",
+		"s": "Must take care of economy, production and people.",
+		"c": "Must not exist.",
+		"l": "Must just make sure private property is safe and there is free market."
 	},
 	{
 		"question": "Marxism",
-		"f": "No, power and property are necessary to get order",
-		"s": "No, power and property are necessary in order to distrivute resources ecualitatively",
-		"c": "Yes, all workers deserve the entire benefits of what they produce",
-		"l": "No, power and property are necessary in order to maximize owners benefits"
+		"f": "No, power and property are necessary to get order.",
+		"s": "No, power and property are necessary in order to distribute resources equally.",
+		"c": "Yes, all workers deserve the entire benefits of what they produce.",
+		"l": "No, power and property are necessary in order to maximize owners benefits."
 	},
 	{
 		"question": "Crime",
-		"f": "Must be hardly punished but it's able to be compensate with money",
-		"s": "Crime has no gap in my society unless it's done by the government, because the end justifies the means",
-		"c": "The people handeles it, no one wants crime so it desapeares naturaly",
-		"l": "Must be hardly punished but the only crimes eare: steal, rob and kill. So the government is not able to commit dose crimes allso, which means no taxes"
+		"f": "Must be harshly punished but it's able to be compensated with money.",
+		"s": "Crime has no place in my society unless it's done by the government, because the end justifies the means.",
+		"c": "The people handle it, no one wants crime so it disappears naturally.",
+		"l": "Must be harshly punished but the only crimes are: steal, rob and kill. So the government is not able to commit those crimes also, which means no taxes."
+	},
+	{
+		"question": "School",
+		"f": "There must be public education, however if someone can aford more it has to be the option too. But all of them have to teach the same stuff which is decided by the government.",
+		"s": "All of them must be public and to teach the same stuff which is decided by the government. Unless it is in order to teach future governants, they need better education.",
+		"c": "All of them must provide students all the knouladge they need from an objective perspective.",
+		"l": "All of them must provide students all the knouladge they need from an objective perspective. And them must be private so the government doesn't waste on that."
+	},
+	{
+		"question": "Property",
+		"f": "Public and private.",
+		"s": "Just public.",
+		"c": "Just private unless it's a way of production, like a factory, a large field...",
+		"l": "Just private."
+	},
+	{
+		"question": "Work",
+		"f": "Given by the governmen and the rich.",
+		"s": "Given by the government.",
+		"c": "Self administrated.",
+		"l": "Given by the rich."
 	}
 ]
