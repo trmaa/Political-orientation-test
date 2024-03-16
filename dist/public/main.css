@@ -1,4 +1,4 @@
-h1, p, button{
+h1, p, button {
     padding-left: 20px;
     border-radius: 0;
 }
@@ -106,4 +106,8 @@ body {
     width: 0; /* Inicialmente la barra no ocupa espacio */
     transition-duration: 500ms;
     border-radius: 0;
+}
+
+.muestra{
+    height:100%;width:20px;color:#fff0;
 }

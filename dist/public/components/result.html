@@ -9,9 +9,22 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style type="text/css">
+
+    #calc{
+        padding-top: 20px;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+    }
+
+    </style>
 </head>
 <body>
 <div id="body">
+    <h1>THE BEST POLITICAL IDEOLOGY TEST</h1>
+    <div id="questions"></div>
+
     <div id="calc">loading...</div>
 </div>
 <div class="area" style="border-radius: 0;" >
@@ -34,6 +47,72 @@
 </div>
 
 <script type="module" src="./src/style.js"></script>
+<script type="text/javascript">
+    
+function graph(){
+    let graph = `
+        <div id="graph" style="
+            background:#0000;
+            width:100%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        ">
+            <div id="sillyzone" style="
+                background:#0000;
+                width: 200px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                border: 10px dashed #af0;
+                position:absolute;
+                z-index:1;
+            "></div>
+
+            <div id="sillyzone" style="
+                width: 800px;
+                height: 800px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: radial-gradient(circle at 50% 50%, #ffff 0%, rgba(255, 255, 255, 0) 50%);
+                position:absolute;
+                z-index:0;
+            "></div>
+
+            <div style="
+                background:#0000;
+                width:100%;
+                height:100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                z-index:-1;
+            ">
+                <div id="Sovietic" style="background:#f55; border-radius:0;"></div>
+                <div id="Fascist" style="background:#55f; border-radius:0;"></div>
+                <div id="Comunist" style="background:#ff5; border-radius:0;"></div>
+                <div id="Liberal" style="background:#5ff; border-radius:0;"></div>
+            </div>
+        </div>
+    `;
+    document.querySelector("#right").innerHTML = graph;
+}
+
+let inter = setInterval(() => {
+    console.log("a")
+    if (document.getElementById("calc").innerHTML !== "loading...") {
+        (async () => {
+            graph();
+            clearInterval(inter);
+        })();
+    }
+}, 100);
+
+</script>
 
 </body>
 </html>

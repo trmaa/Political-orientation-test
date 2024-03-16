@@ -17,11 +17,19 @@ async function calc(){
     const questions = await json_read("./src/questions.json");
 
     return `
-        You are: ${idMaximo}<br></br>
-        Fascist: ${datos.Fascist*100/questions.length}%<br>
-        Sovietic: ${datos.Sovietic*100/questions.length}%<br>
-        Comunist: ${datos.Comunist*100/questions.length}%<br>
-        Liberal: ${datos.Liberal*100/questions.length}%<br>
+        <div id="left">
+            <b>You are: </b> ${" "+idMaximo} <br></br>
+
+            <div id="vars">
+                <div class="muestra" style="background:#f55;">..</div><div id="Fascist"> Fascist: ${datos.Fascist*100/questions.length}%</div>
+                <div class="muestra" style="background:#55f;">..</div><div id="Sovietic"> Sovietic: ${datos.Sovietic*100/questions.length}%</div>
+                <div class="muestra" style="background:#ff5;">..</div><div id="Comunist"> Comunist: ${datos.Comunist*100/questions.length}%</div>
+                <div class="muestra" style="background:#5ff;">..</div><div id="Liberal"> Liberal: ${datos.Liberal*100/questions.length}%</div>
+                <div class="muestra" style="background:#5f5;">..</div><div> Silly without thaughts: ${100-(datos.Liberal+datos.Fascist+datos.Sovietic+datos.Comunist)*100/questions.length}%</div>
+            </div>
+        </div>
+        <div id="right">
+        </div>
     `;
 }
 
@@ -42,6 +50,7 @@ async function load()
                     <p class="s">b) ${q.s}</p>
                     <p class="c">c) ${q.c}</p>
                     <p class="l">d) ${q.l}</p>
+                    <p>e) none</p>
                 </div>
                 <div class="foto">
                     <img src="${img}" style="width:100%;"></img>
