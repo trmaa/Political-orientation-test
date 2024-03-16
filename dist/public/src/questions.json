@@ -8,17 +8,17 @@
 	},
 	{
 		"question": "Government and laws",
-		"f": "Must control defende the order and the values of civilization",
+		"f": "Must defende the order and the values of civilization",
 		"s": "Must take care of economy, production and people",
 		"c": "Must not exsist",
 		"l": "Must just make sure private property is safe and there is free market"
 	},
 	{
-		"question": "Plato's society",
+		"question": "Marxism",
 		"f": "No, power and property are necessary to get order",
 		"s": "No, power and property are necessary in order to distrivute resources ecualitatively",
-		"c": "Yes, it is just what the world needs, inspite of all the antiartistic part",
-		"l": "No, power and property are necessary in order to give people a reason to hard work"
+		"c": "Yes, all workers deserve the entire benefits of what they produce",
+		"l": "No, power and property are necessary in order to maximize owners benefits"
 	},
 	{
 		"question": "Crime",

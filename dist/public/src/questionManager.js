@@ -1,6 +1,6 @@
-import { json_read, html_read } from "./json.js";
+import { json_read, json_download, html_read } from "./json.js";
 import { pixabay_getImg } from "./pixabay.js";
-import { asignSounds } from "./style.js";
+import { sound_asign } from "./style.js";
 import { feedback_completion } from "./loadingBar.js";
 
 let Fascist = 0;
@@ -8,13 +8,21 @@ let Sovietic = 0;
 let Comunist = 0;
 let Liberal = 0;
 
-function calc(){
+async function calc(){
     let datos = {Fascist:Fascist,Sovietic:Sovietic,Comunist:Comunist,Liberal:Liberal};
     let valores = Object.values(datos);
     let maximo = Math.max.apply(null, valores);
     let idMaximo = Object.keys(datos).find(key => datos[key] === maximo);
 
-    return idMaximo;
+    const questions = await json_read("./src/questions.json");
+
+    return `
+        You are: ${idMaximo}<br></br>
+        Fascist: ${datos.Fascist*100/questions.length}%<br>
+        Sovietic: ${datos.Sovietic*100/questions.length}%<br>
+        Comunist: ${datos.Comunist*100/questions.length}%<br>
+        Liberal: ${datos.Liberal*100/questions.length}%<br>
+    `;
 }
 
 async function load()
@@ -69,16 +77,17 @@ async function load()
         });
     }
 
-    asignSounds(document);
+    sound_asign(document);
 } await load();
 
 
 let intervalId = setInterval(() => {
     if (document.getElementById("questions").innerHTML === "") {
         (async () => {
-            let result = window.open();
+            let data = await calc();
             let content = await html_read("./components/result.html");
-            result.document.write(content);
+            document.write(content);
+            document.querySelector("#calc").innerHTML = data;
             clearInterval(intervalId);
         })();
     }
