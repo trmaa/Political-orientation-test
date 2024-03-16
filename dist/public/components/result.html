@@ -59,6 +59,32 @@ function graph(){
             justify-content: center;
             align-items: center;
         ">
+            <div style="
+                background:#0000;
+                width:100%;
+                height:100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                z-index:-1;
+            ">
+                <div style="background:#f55; border-radius:0;"></div>
+                <div style="background:#55f; border-radius:0;"></div>
+                <div style="background:#ff5; border-radius:0;"></div>
+                <div style="background:#5ff; border-radius:0;"></div>
+            </div>
+
+            <div id="pointer" style="
+                background:#0000;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                border: 5px solid #000;
+                position:relative;
+                z-index:2;
+                display: flex;
+            "></div>
+
             <div id="sillyzone" style="
                 background:#0000;
                 width: 200px;
@@ -82,24 +108,23 @@ function graph(){
                 position:absolute;
                 z-index:0;
             "></div>
-
-            <div style="
-                background:#0000;
-                width:100%;
-                height:100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                z-index:-1;
-            ">
-                <div id="Sovietic" style="background:#f55; border-radius:0;"></div>
-                <div id="Fascist" style="background:#55f; border-radius:0;"></div>
-                <div id="Comunist" style="background:#ff5; border-radius:0;"></div>
-                <div id="Liberal" style="background:#5ff; border-radius:0;"></div>
-            </div>
         </div>
     `;
     document.querySelector("#right").innerHTML = graph;
+
+    const Fascist = parseInt(document.querySelector("#Fascist").innerHTML);
+    const Sovietic =  parseInt(document.querySelector("#Sovietic").innerHTML);
+    const Comunist =  parseInt(document.querySelector("#Comunist").innerHTML);
+    const Liberal = parseInt(document.querySelector("#Liberal").innerHTML);
+
+    let y = (Fascist+Sovietic-Liberal-Comunist)*2.5;
+    let x = (Fascist+Liberal-Comunist-Sovietic)*1.3;
+    
+    console.log(x +" - "+ y)
+
+    let pointer = document.querySelector("#pointer");
+    pointer.style.left = `calc(${x}px - 50%)`;
+    pointer.style.bottom = `${y}px`;
 }
 
 let inter = setInterval(() => {
