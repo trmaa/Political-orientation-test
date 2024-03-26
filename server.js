@@ -4,7 +4,7 @@ import open from 'open';
 import fs from 'fs';
 
 const app = express();
-const port = 4858;
+const port = 3000;
 
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);

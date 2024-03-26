@@ -8,13 +8,17 @@ let Sovietic = 0;
 let Comunist = 0;
 let Liberal = 0;
 
-async function calc(){
+async function calc(){ 
     let datos = {Fascist:Fascist,Sovietic:Sovietic,Comunist:Comunist,Liberal:Liberal};
     let valores = Object.values(datos);
     let maximo = Math.max.apply(null, valores);
     let idMaximo = Object.keys(datos).find(key => datos[key] === maximo);
 
     const questions = await json_read("./src/questions.json");
+
+    document.addEventListener("click", calc);
+
+    console.log(datos) 
 
     return `
         <div id="left">
@@ -91,9 +95,9 @@ async function load()
 let intervalId = setInterval(() => {
     if (document.getElementById("questions").innerHTML === "") {
         (async () => {
-            let data = await calc();
             let content = await html_read("./components/result.html");
             document.write(content);
+            let data = await calc();
             document.querySelector("#calc").innerHTML = data;
             clearInterval(intervalId);
         })();

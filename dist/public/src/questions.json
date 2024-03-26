@@ -47,5 +47,19 @@
 		"s": "Given by the government.",
 		"c": "Self administrated.",
 		"l": "Given by the rich."
+	},
+	{
+		"question": "Hitler",
+		"f": "So bad, he killed the jews. But despite his madness he was a great lider and loved his country.",
+		"s": "A monster.",
+		"c": "So stupid, his politicies had no logic.",
+		"l": "Not so bad, when comparing to other systems, however it is indeed much more authoritarian than I'd like. I want a very litle state."
+	},
+	{
+		"question": "Lenin",
+		"f": "Not a single thing right.",
+		"s": "My heroe.",
+		"c": "So corrupt, not a good idea of comunism.",
+		"l": "Stupid guy."
 	}
 ]
